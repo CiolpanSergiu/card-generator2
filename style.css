@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.spacer {
+  padding: 2rem;
+}
+
+.card-container {
+  background-image: url("./bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  left: 0;
+  opacity: 0.3;
+}
+
+.card-header {
+  color: #c99a57;
+  font-size: 6.5vw;
+  position: absolute;
+  top: 2.5%;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font: open-sans;
+  text-transform: uppercase;
+  z-index: 99999;
+}
+
+.name {
+  position: absolute;
+  top: 25%;
+  left: 7.5%;
+  font-size: 5vw;
+}
+
+.function-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.function-label,
+.function {
+  position: absolute;
+  left: 2.5%;
+}
+
+.function-label {
+  text-transform: capitalize;
+  color: white;
+  z-index: 999999;
+  font-size: 3vw;
+}
+
+.function {
+  top: 60%;
+  font-size: 3vw;
+}
+
+.info-text {
+  position: absolute;
+  font-size: 2vw;
+  bottom: 2%;
+  letter-spacing: 2px;
+}
+
+.profile-img {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  height: 70%;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.name,
+.function,
+.info-text {
+  text-transform: uppercase;
+  color: white;
+  z-index: 999999;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+}
+
+label {
+  font-size: 1.2rem;
+  margin: 0.25rem;
+}
+
+label::before {
+  content: "*";
+  color: crimson;
+  font-size: 1.3rem;
+}
+
+input {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  width: 100%;
+  color: dodgerblue;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+#fill-btn,
+#screenshot-btn {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 6px;
+  width: 90vw;
+  margin: 0.25rem 5vw;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  border: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+#fill-btn:hover,
+#screenshot-btn:hover {
+  background-color: #509652;
+}
+
+#output {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <title>Card Generator</title>
+  </head>
+  <body>
+    <h1 class="main-header">Card Generator</h1>
+    <form class="form-container">
+      <label for="name-field">
+        Name
+        <input type="text" id="name-field" />
+      </label>
+      <label for="function-field">
+        Function
+        <input type="text" id="function-field" />
+      </label>
+      <label for="profile-pic-field">
+        Profile Pic
+        <input type="file" id="profile-pic-field" />
+      </label>
+      <button id="fill-btn">Fill Card</button>
+      <button id="screenshot-btn">Screenshot This</button>
+    </form>
+    <div class="spacer">
+      <div class="card-container">
+        <h1 class="card-header">velgala</h1>
+        <span class="name"></span>
+        <div class="function-container">
+          <span class="function-label">Functie:</span>
+          <span class="function"></span>
+        </div>
+        <span class="info-text">-legitimatie de serviciu-</span>
+        <img src="" alt="profile image" class="profile-img" />
+        <img src="./logo.png" alt="velgala logo" class="logo" />
+      </div>
+    </div>
+    <div class="spacer">
+      <div id="output"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
