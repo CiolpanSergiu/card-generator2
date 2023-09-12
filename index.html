@@ -8,39 +8,78 @@
     <title>Card Generator</title>
   </head>
   <body>
-    <h1 class="main-header">Card Generator</h1>
+    <h1 class="main-header">Card Generator v2.0</h1>
+    <h2 class="main-subheader">
+      ( te rog sa ai fereastra la dimensiune maxima pana sa faci poza )
+    </h2>
+
     <form class="form-container">
-      <label for="name-field">
-        Name
-        <input type="text" id="name-field" />
-      </label>
-      <label for="function-field">
-        Function
-        <input type="text" id="function-field" />
-      </label>
-      <label for="profile-pic-field">
-        Profile Pic
-        <input type="file" id="profile-pic-field" />
-      </label>
-      <button id="fill-btn">Fill Card</button>
-      <button id="screenshot-btn">Screenshot This</button>
+      <div class="fields">
+        <label>
+          Name
+          <input type="text" id="name-field" />
+        </label>
+        <label>
+          Function
+          <select id="function-field">
+            <option value="undefined" disabled selected="true">
+              --Choose function--
+            </option>
+            <option value="Operator Date">Operator Date</option>
+            <option value="Casier">Casier</option>
+            <option value="Lucrator Comercial">Lucrator Comercial</option>
+            <option value="Manipulant Marfa">Manipulant Marfa</option>
+            <option value="Sofer">Sofer</option>
+          </select>
+        </label>
+        <!-- This is a manual color picker where you need to type 
+        the name, hex code or rgb code manually -->
+        <!-- <label>
+          Text Color ( name / rgb / hex )
+          <input
+            type="text"
+            id="text-color-field"
+            placeholder="If no value is provided, it will fallback to black"
+          />
+        </label> -->
+        <label>
+          Text Color ( Color Picker Variant )
+          <input type="color" id="color-picker" />
+        </label>
+        <label>
+          Newcomer Tag
+          <input type="checkbox" id="newcomer-tag" />
+        </label>
+        <label>
+          Profile Pic
+          <input type="file" id="profile-pic-field" />
+        </label>
+      </div>
+      <div class="btns">
+        <button id="fill-btn">Fill Card</button>
+        <button id="screenshot-btn">Screenshot This</button>
+      </div>
     </form>
+
     <div class="spacer">
       <div class="card-container">
         <h1 class="card-header">velgala</h1>
-        <span class="name"></span>
+        <span class="employee-name colored-text"></span>
         <div class="function-container">
-          <span class="function-label">Functie:</span>
-          <span class="function"></span>
+          <span class="function-label colored-text">Funcție:</span>
+          <span class="function colored-text"></span>
         </div>
-        <span class="info-text">-legitimatie de serviciu-</span>
+        <span class="newcomer-label colored-text">eu invat</span>
+        <span class="card-label colored-text">-legitimatie de serviciu-</span>
         <img src="" alt="profile image" class="profile-img" />
         <img src="./logo.png" alt="velgala logo" class="logo" />
       </div>
     </div>
+
     <div class="spacer">
       <div id="output"></div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>

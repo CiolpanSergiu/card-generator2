@@ -6,8 +6,42 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: gray;
+}
+
+.form-container {
+  background-color: #1a252b;
+  color: white;
+  width: 100vw;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.fields {
+  display: grid;
+  gap: 0 5%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-header {
   text-align: center;
+  margin: 2rem 0 0 0;
+  font-size: 2.5rem;
+}
+
+.main-subheader {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .spacer {
@@ -46,10 +80,10 @@
   z-index: 99999;
 }
 
-.name {
+.employee-name {
   position: absolute;
   top: 25%;
-  left: 7.5%;
+  left: 5%;
   font-size: 5vw;
 }
 
@@ -76,7 +110,7 @@
   font-size: 3vw;
 }
 
-.info-text {
+.card-label {
   position: absolute;
   font-size: 2vw;
   bottom: 2%;
@@ -92,9 +126,10 @@
   border-radius: 5px;
 }
 
-.name,
+.employee-name,
 .function,
-.info-text {
+.card-label,
+.newcomer-label {
   text-transform: uppercase;
   color: white;
   z-index: 999999;
@@ -106,25 +141,23 @@
   max-width: 90vw;
 }
 
-label {
+label,
+select {
   font-size: 1.2rem;
-  margin: 0.25rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
 }
 
-label::before {
-  content: "*";
-  color: crimson;
-  font-size: 1.3rem;
-}
-
-input {
-  margin-left: 2rem;
-  margin-top: 0.5rem;
+input,
+select {
   font-size: 1.25rem;
   width: 100%;
-  color: dodgerblue;
+  color: #2974ff;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
+  margin-top: 0.5rem;
+  background-color: #f7f7f7;
 }
 
 #fill-btn,
@@ -132,22 +165,50 @@ input {
   background-color: dodgerblue;
   color: white;
   border-radius: 6px;
-  width: 90vw;
-  margin: 0.25rem 5vw;
+  margin: 0.5rem 1rem;
   padding: 0.5rem 0;
   font-size: 1.5rem;
   border: none;
   transition: all 0.4s ease;
   cursor: pointer;
+  width: 100%;
 }
 
 #fill-btn:hover,
 #screenshot-btn:hover {
-  background-color: #509652;
+  background-color: #c278cc;
 }
 
 #output {
   aspect-ratio: 16 / 9;
   height: 100%;
   width: 100%;
+}
+
+.newcomer-label {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  font-size: 7.5vw;
+  letter-spacing: 6px;
+  opacity: 0;
+}
+
+.visible-text {
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  width: auto;
+}
+
+label,
+select {
+  cursor: pointer;
 }
